@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>More Garlic 🧄 — Accessibility</title>
+<meta name="description" content="More Garlic accessibility statement: VoiceOver, Dynamic Type, WCAG-AA color, differentiate-without-color, Increase Contrast, Reduce Transparency, Reduce Motion, Dark Mode, large touch targets, 10 languages, and fully on-device privacy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span aria-hidden="true">🧄</span> More Garlic</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="accessibility.html" aria-current="page">Accessibility</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap content">
+
+    <div class="page-head">
+      <h1>Accessibility</h1>
+      <p class="lede">More Garlic is built to be usable by everyone — accessibility is part of the
+      design, not an afterthought.</p>
+    </div>
+
+    <p>The interface was laid out, colored, and labeled to work with VoiceOver, large text, and the
+    iOS accessibility accommodations from the start. This statement describes what the app supports
+    today, and it is kept honest: anything still in progress is called out, never overclaimed. If
+    something gets in your way, please <a href="#contact">tell us</a> — accessibility feedback goes to
+    the top of the list.</p>
+
+    <h2>VoiceOver</h2>
+    <p>Every interactive control has a meaningful spoken label, and most carry a value, hint, or trait
+    as well:</p>
+    <ul>
+      <li><strong>Recipe cards read as a single element</strong> — title, total time, ingredient
+      count, and the "shares N with your trip" overlap signal, all in plain spoken language (no stray
+      glyphs).</li>
+      <li><strong>Custom controls are fully labeled</strong> — the amount stepper ("Decrease amount" /
+      "Increase amount"), the tap-to-pick amount menu, the unit dropdown, and the per-ingredient
+      "Anchor amount" button.</li>
+      <li><strong>Checkboxes</strong> (shopping rows, pantry staples) expose a button trait, a
+      selected state, a checked value, and a "Double tap to check off" hint.</li>
+      <li><strong>Toolbar and chrome buttons are named</strong> — "Settings", "Add a recipe", "Export
+      list", "Build shopping list", plus per-item "Add … to trip" and "Dismiss …" actions.</li>
+      <li><strong>Off-screen swipe actions are also custom accessibility actions</strong> — for
+      example "Mark as staple" on an ingredient line, which otherwise lives behind a swipe.</li>
+      <li><strong>Decorative graphics are hidden</strong> from VoiceOver (the oversized food emoji,
+      row food icons, empty-state art); their meaning is folded into the element's label instead.</li>
+      <li><strong>Headings and reading order</strong> — section headers are marked as headers for
+      heading navigation, and reading order follows the visual layout.</li>
+    </ul>
+
+    <h2>Dynamic Type</h2>
+    <p>Text uses the system text styles, so it scales with your preferred reading size, including the
+    larger Accessibility sizes. Layouts reflow rather than clip:</p>
+    <ul>
+      <li>The Library grid <strong>collapses from two columns to one</strong> at accessibility text
+      sizes so each card has room for its taller title, meta line, and badge.</li>
+      <li>The trip strip <strong>stacks the label and the "Build shopping list" button vertically</strong>
+      when they no longer fit side by side.</li>
+      <li>Long lines wrap instead of truncating, and thumbnails scale with the text.</li>
+    </ul>
+
+    <h2>Legible color (WCAG AA)</h2>
+    <p>The palette was designed to meet WCAG AA — most pairs reach AAA — for text and icons against
+    their backgrounds, in both light and dark appearance. The high-energy accent is always paired with
+    dark text, never white; warning cues use a darkened amber that clears contrast; and dividers are
+    decorative only, never used to convey state.</p>
+
+    <h2>Differentiate without color</h2>
+    <p>No status is communicated by color alone — every colored cue is paired with a shape, glyph, or
+    text:</p>
+    <ul>
+      <li>Checked vs. unchecked items differ by <strong>shape</strong> (a filled vs. an empty circle)
+      plus a strike-through, not just color.</li>
+      <li>The "shares N with your trip" badge carries a merge glyph and text.</li>
+      <li>Low-confidence scan lines carry a <strong>dotted underline, a warning triangle, and
+      "Check this one" text</strong>, in addition to the amber color.</li>
+    </ul>
+
+    <h2>Increase Contrast</h2>
+    <p>When <strong>Increase Contrast</strong> is on, card and input surfaces gain a defined,
+    full-strength edge so they never float borderless against the background — honored on recipe
+    cards, the trip strip, the import fields, and notice cards.</p>
+
+    <h2>Reduce Transparency</h2>
+    <p>When <strong>Reduce Transparency</strong> is on, the one translucent surface in the app — the
+    floating action bar in the pantry pre-flight — switches from a blurred material to a solid fill, so
+    it never blends into the list behind it.</p>
+
+    <h2>Reduce Motion</h2>
+    <p>More Garlic uses no custom or decorative motion: no developer-driven animations, transitions, or
+    parallax. Navigation and sheets use the standard system transitions, which already respect your
+    <strong>Reduce Motion</strong> setting.</p>
+
+    <h2>Dark Mode</h2>
+    <p>The full palette is built from light/dark-adaptive colors, so every screen flips correctly to a
+    deep aubergine dark theme that follows the system appearance, with all contrast pairs verified in
+    both modes.</p>
+
+    <h2>Larger touch targets</h2>
+    <p>Tappable elements meet or exceed the recommended minimum touch target. A shared ~48&nbsp;pt
+    target guarantees a generous, full-rectangle hit area for icon-only controls (the amount stepper,
+    anchor button, refresh), and rows and primary buttons enforce a minimum height so the whole element
+    is tappable.</p>
+
+    <h2>Languages</h2>
+    <p>More Garlic ships in <strong>10 languages</strong> — English, Spanish, French, German, Italian,
+    Portuguese (Brazil), Japanese, Korean, Simplified Chinese, and Russian — and the interface follows
+    your device's language when it is one of these. Separately, a recipe written in another language
+    can be <strong>translated on your device</strong> at import using Apple's on-device translation, so
+    a foreign recipe becomes a clean, readable card without the text leaving your iPhone.</p>
+
+    <h2>Private and on-device</h2>
+    <p>Accessibility and privacy go together here: recipe import, parsing, ingredient resolution,
+    suggestions, and the optional on-device AI all run <strong>on your device</strong>. There is no
+    account, and a one-tap "Export library (.zip)" gives you full JSON plus a clean Markdown file per
+    recipe, so nothing is locked in. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+    <hr>
+
+    <h2 id="contact">Tell us what's missing</h2>
+    <p>If any part of More Garlic is hard to use with an assistive technology, email
+    <a href="mailto:info@psychosonicconsulting.com">info@psychosonicconsulting.com</a>. Accessibility
+    reports are read first and fixed fast.</p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 More Garlic 🧄</span>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="mailto:info@psychosonicconsulting.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
